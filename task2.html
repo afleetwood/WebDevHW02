@@ -1,0 +1,40 @@
+<!-- Author: Alex Fleetwood -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Web Dev HW02: Task 2</title>
+    <script>
+    /* The JavaScript written here was done with assistance from the JavaScript tutorial and resources on w3schools.com */
+
+    function increment() {
+        var heading = document.getElementById("heading");
+	var value = parseInt(heading.innerHTML, 10);
+        heading.innerHTML = value + 10;
+    }
+    function popup() {
+ 	window.alert(document.getElementById("heading").innerHTML);
+    }
+    function append() {
+	var pg = document.createElement("p");
+	var textN = document.createTextNode(document.getElementById("heading").innerHTML);
+	pg.appendChild(textN);
+	document.getElementById("for-paragraphs").appendChild(pg);
+    }
+    </script>
+  </head>
+
+  <body>
+    <h1>Task 2</h1>
+    <h2 id="heading">10</h2>
+    <button onclick="popup()">Current Value</button>
+    <button onclick="increment()">Increment</button>
+    <button onclick="append()">Write to page</button>
+
+    <div id="for-paragraphs">
+    </div>
+  </body>
+</html>

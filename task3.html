@@ -1,0 +1,63 @@
+<!-- Author: Alex Fleetwood -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Web Dev HW02: Task 3</title>
+	
+    <!-- CSS here has been adapted from examples on w3schools -->
+    <style>
+    *	{
+	box-sizing: border-box;
+    }
+    .column	{
+	padding: 10px;
+    }
+    .column.left	{
+	float: left;
+	width: 33%;
+    }
+    .column.right	{
+	float: right;
+	width: 67%;
+    }
+    .link	{
+	margin: 20px;
+    }
+    </style>
+
+    <script>
+    /* Lorem Ipsem text excerpt copied from the Wikipedia entry.*/
+    function lorem() {
+	var pg = document.getElementById("mutable");
+	pg.innerHTML = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
+    }
+    /* 99 Bottles first verse copied from Wikipedia; following verses modified from the first. */
+    function bottles() {
+	var pg = document.getElementById("mutable");
+	pg.innerHTML = "99 bottles of beer on the wall, 99 bottles of beer. Take one down, pass it around, 98 bottles of beer on the wall...<br><br>98 bottles of beer on the wall, 98 bottles of beer. Take one down, pass it around, 97 bottles of beer on the wall...<br><br>97 bottles of beer on the wall, 97 bottles of beer. Take one down, pass it around, 96 bottles of beer on the wall...<br><br>96 bottles of beer on the wall, 96 bottles of beer. Take one down, pass it around, 95 bottles of beer on the wall...";
+    }
+    function thing() {
+	var pg = document.getElementById("mutable");
+	pg.innerHTML = "This is the third thing.";
+    }
+    </script>
+  </head>
+
+  <body onload="javascript:lorem()">
+    <h1>HW02 Task Three</h1>
+      <div class="column left">
+	<a class="link" href="javascript:lorem()">Lorem Ipsem</a>
+	<br>
+     	<a class="link" href="javascript:bottles()">99 Bottles</a>
+     	<br>
+	<a class="link" href="javascript:thing()">Last Thing</a>
+      </div>
+      <div class="column right">
+	<p id="mutable">This text will never be displayed.</p>
+      </div>
+  </body>
+</html>
